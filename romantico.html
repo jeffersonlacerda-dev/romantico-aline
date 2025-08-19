@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aline My Love</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(240, 138, 138);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .painel {
+            text-align: center;
+            background-color: #c1a3c5;
+            box-shadow: 2px 2px 12px 2px;
+            padding: 20px 20px 50px 20px;
+            width: 600px;
+            border-radius: 20px;
+            border: none;
+            position: relative;
+        }
+
+        h1 {
+            color: white;
+            font-size: xx-large;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .botoes {
+            margin-top: 30px;
+        }
+
+        button {
+            height: 40px;
+            width: 100px;
+            background-color: red;
+            border: none;
+            border-radius: 15px;
+            color: white;
+            font-size: large;
+            cursor: pointer;
+            margin: 0 10px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>Promete ser minha conchinha pra sempre? 😴</h1>
+
+        <img src="https://i.pinimg.com/originals/4b/8f/48/4b8f48e3c072dc78821ad860988fe284.gif" alt="gif ursinho">
+
+        <div class="botoes">
+            <button id="sim">Sim</button>
+            <button id="nao">Não</button>
+        </div>
+    </div>
+
+    <script>
+        const naoBtn = document.getElementById('nao');
+
+        naoBtn.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - naoBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - naoBtn.offsetHeight);
+            naoBtn.style.position = 'absolute';
+            naoBtn.style.left = x + 'px';
+            naoBtn.style.top = y + 'px';
+        });
+    </script>
+</body>
+</html>
